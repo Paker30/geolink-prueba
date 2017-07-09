@@ -1,3 +1,13 @@
-<div>
-    {{title == true ? 'Reference area' : 'Compared area'}} {{population}} {{address}}
+<div class="area">
+    <header>
+        <h3>{{title == true ? 'Reference area' : 'Compared area'}} {{pos > 0 ? pos : ''}}</h3>
+    </header>
+    <section class="area__population" [ngClass]="{'reference': pos < 1, 'compared1': pos == 1, 'compared2': pos > 1}">
+        <span>{{population}}</span>
+        <span>Population</span>
+    </section>
+    <section class="area__address">
+        <span>{{address}}</span>
+    </section>
+    <footer class="area__footer" [ngClass]="{'reference': pos < 1, 'compared1': pos == 1, 'compared2': pos > 1}"></footer>
 </div>

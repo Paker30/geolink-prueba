@@ -9,6 +9,7 @@ export class AreaComponent {
     @Input() title: string;
     @Input() population: number;
     @Input() address: string;
+    @Input() pos: number;
 
     constructor() { }
 }
