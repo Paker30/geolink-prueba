@@ -4,11 +4,13 @@
 }
 
 .geolink__barra {
-    /*flex: 20;*/
+    display: flex;
+    flex-basis: 200px;
 }
 
 .geolin__grafico {
-    /*flex: 80;*/
+    display: flex;
+    flex: 1;
 }
 
 @media only screen and (min-width: 780px) {
