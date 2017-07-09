@@ -7,7 +7,7 @@ import * as d3Axis from 'd3-axis';
 
 @Component({
     selector: 'geoblink-grafico',
-    template: require('./grafico.html'),
+    template: require('./grafico.html'), host: {style: 'width: 100%'},
     styles: [require('./grafico.css')]
 })
 export class GraficoComponent implements OnInit {
