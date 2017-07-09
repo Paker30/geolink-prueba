@@ -1,0 +1,5 @@
+<div class="barra">
+    <section class="barra__section" *ngFor="let calle of calles">
+        <barra-area [title]="calle.variables.is_reference" [population]="calle.variables.population" [address]="calle.address"></barra-area>
+    </section>
+</div>
