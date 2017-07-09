@@ -1,11 +1,12 @@
 import { RouterModule, Routes } from '@angular/router';
 import { BarraComponent } from './barra/barra.component';
 import { GraficoComponent } from './grafico/grafico.component';
+import { GeolinkComponent } from './geolink/geolink.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/barra',
+    redirectTo: '/geolink',
     pathMatch: 'full'
   },
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
       path: 'grafico',
       component: GraficoComponent
+  },
+  {
+    path: 'geolink',
+    component: GeolinkComponent
   }
 ];
 
