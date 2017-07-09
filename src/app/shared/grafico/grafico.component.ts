@@ -1,9 +1,9 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { GeoBlinkHTTPService } from '../services/http.service';
 import * as d3 from 'd3-selection';
-import * as d3Scale from "d3-scale";
-import * as d3Array from "d3-array";
-import * as d3Axis from "d3-axis";
+import * as d3Scale from 'd3-scale';
+import * as d3Array from 'd3-array';
+import * as d3Axis from 'd3-axis';
 
 @Component({
     selector: 'geoblink-grafico',
@@ -23,14 +23,14 @@ export class GraficoComponent implements OnInit {
     private svg: any;
     private g: any;
 
-    constructor(private element: ElementRef, private http: GeoBlinkHTTPService) { 
+    constructor(private element: ElementRef, private http: GeoBlinkHTTPService) {
     }
 
-    ngOnInit() { 
+    ngOnInit() {
         this.http.get('map')
             .map(data => this.data = data)
-            .subscribe(()=>{
-                this.initSvg()
+            .subscribe(() => {
+                this.initSvg();
                 // this.initAxis();
                 // this.drawAxis();
                 // this.drawBars();
@@ -38,11 +38,11 @@ export class GraficoComponent implements OnInit {
     }
 
     private initSvg() {
-        this.svg = d3.select("svg");
-        this.width = +this.svg.attr("width") - this.margin.left - this.margin.right ;
-        this.height = +this.svg.attr("height") - this.margin.top - this.margin.bottom;
-        this.g = this.svg.append("g")
-                        .attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")");;
+        this.svg = d3.select('svg');
+        this.width = +this.svg.attr('width') - this.margin.left - this.margin.right ;
+        this.height = +this.svg.attr('height') - this.margin.top - this.margin.bottom;
+        this.g = this.svg.append('g')
+                        .attr('transform', 'translate(' + this.margin.left + ',' + this.margin.top + ')');
     }
 
     // private initAxis() {
@@ -53,30 +53,30 @@ export class GraficoComponent implements OnInit {
     // }
 
     // private drawAxis() {
-    //     this.g.append("g")
-    //         .attr("class", "axis axis--x")
-    //         .attr("transform", "translate(0," + this.height + ")")
+    //     this.g.append('g')
+    //         .attr('class', 'axis axis--x')
+    //         .attr('transform', 'translate(0,' + this.height + ')')
     //         .call(d3Axis.axisBottom(this.x));
-    //     this.g.append("g")
-    //         .attr("class", "axis axis--y")
-    //         .call(d3Axis.axisLeft(this.y).ticks(10, "%"))
-    //         .append("text")
-    //         .attr("class", "axis-title")
-    //         .attr("transform", "rotate(-90)")
-    //         .attr("y", 6)
-    //         .attr("dy", "0.71em")
-    //         .attr("text-anchor", "end")
-    //         .text("Frequency");
+    //     this.g.append('g')
+    //         .attr('class', 'axis axis--y')
+    //         .call(d3Axis.axisLeft(this.y).ticks(10, '%'))
+    //         .append('text')
+    //         .attr('class', 'axis-title')
+    //         .attr('transform', 'rotate(-90)')
+    //         .attr('y', 6)
+    //         .attr('dy', '0.71em')
+    //         .attr('text-anchor', 'end')
+    //         .text('Frequency');
     // }
 
     // private drawBars() {
-    //     this.g.selectAll(".bar")
+    //     this.g.selectAll('.bar')
     //         .data(STATISTICS)
-    //         .enter().append("rect")
-    //         .attr("class", "bar")
-    //         .attr("x", (d) => this.x(d.letter) )
-    //         .attr("y", (d) => this.y(d.frequency) )
-    //         .attr("width", this.x.bandwidth())
-    //         .attr("height", (d) => this.height - this.y(d.frequency) );
+    //         .enter().append('rect')
+    //         .attr('class', 'bar')
+    //         .attr('x', (d) => this.x(d.letter) )
+    //         .attr('y', (d) => this.y(d.frequency) )
+    //         .attr('width', this.x.bandwidth())
+    //         .attr('height', (d) => this.height - this.y(d.frequency) );
     // }
 }

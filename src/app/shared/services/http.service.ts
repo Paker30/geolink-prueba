@@ -16,9 +16,9 @@ export class GeoBlinkHTTPService {
         return new Headers(headersConfig);
     }
 
-    constructor( private http: Http){}
+    constructor(private http: Http) {}
 
-    get(path: string, params: object = {}): Observable<any>{
+    public get(path: string, params: object = {}): Observable<any> {
         return this.http.get(`${this.host}${path}`)
                         .map((res: Response) => res.json());
     }

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { routing, RootComponent } from './routes';
 
-import { SharedModule } from './shared/shared.module'
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   imports: [
