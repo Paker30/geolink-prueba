@@ -1,8 +1,8 @@
 <div class="area">
-    <header>
+    <header [ngClass]="{'area__header_reference': pos < 1, 'area__header_area1': pos == 1, 'area__header_area2': pos > 1}">
         <h3>{{title == true ? 'Reference area' : 'Compared area'}} {{pos > 0 ? pos : ''}}</h3>
     </header>
-    <section class="area__population" [ngClass]="{'reference': pos < 1, 'compared1': pos == 1, 'compared2': pos > 1}">
+    <section class=" area__population " [ngClass]="{ 'reference': pos < 1, 'compared1': pos==1 , 'compared2': pos> 1}">
         <span>{{population}}</span>
         <span>Population</span>
     </section>
