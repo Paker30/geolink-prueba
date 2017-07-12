@@ -2,3 +2,14 @@
 coverage/
 dist/
 node_modules/
+
+# misc
+npm-debug.log
+
+#System Files
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+/.idea
+.settings/
