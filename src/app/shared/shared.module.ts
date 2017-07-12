@@ -5,6 +5,7 @@ import { AreaComponent } from './area/area.component';
 import { GraficoComponent } from './grafico/grafico.component';
 import { GeolinkComponent } from './geolink/geolink.component';
 import { GeoBlinkHTTPService } from './services/http.service';
+import { ChartService } from './services/chart.service';
 import sharedRoutes from './shared.routes';
 
 @NgModule({
@@ -14,6 +15,6 @@ import sharedRoutes from './shared.routes';
   ],
   declarations: [ BarraComponent, AreaComponent, GraficoComponent, GeolinkComponent ],
   exports: [ GeolinkComponent ],
-  providers: [ GeoBlinkHTTPService ]
+  providers: [ GeoBlinkHTTPService, ChartService ]
 })
 export class SharedModule {}
